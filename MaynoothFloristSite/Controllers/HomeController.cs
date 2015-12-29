@@ -10,7 +10,10 @@ namespace MaynoothFloristSite.Controllers
     public class HomeController : Controller
     {
         private FlowersdbEntities db = new FlowersdbEntities();
-
+         /// <summary>
+         /// //////////////////////////////////////////////////////////////////////
+         /// </summary>
+         /// <returns></returns>
         // GET: Home
         public ActionResult Index()
         {
