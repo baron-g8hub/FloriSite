@@ -1,0 +1,64 @@
+﻿@model IEnumerable<MFlorist.DataAccessLayer.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Gallery</h2>
+
+
+@*<div class="jumbotron">
+    <div class="container">
+        <h2>Welcome to Maynooth Florist!</h2>
+        <p>This is an example for jumbotron.</p>
+        
+            <a class="btn btn-primary btn-lg" role="button">
+                Order Now!
+            </a>
+       
+    </div>
+</div>*@
+
+<div class="container">
+    <style>
+
+        li{
+            display: inline-block;
+            float: none;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+    </style>
+
+    <div class="row">
+        <ul>
+         
+            @foreach (var item in Model)
+            {
+             
+                <li>
+
+                    <div>
+
+                        <a href="#">
+                            <img src="@Url.Content("~/Products/")@Html.DisplayFor(modelItem => item.Image)" alt="Product Image" class="img-thumbnail img-rounded" width="160" height="179" />
+                        </a>
+                        <br />
+                        @Html.DisplayFor(modelItem => item.Name)
+                        <br />
+                        <h4>
+                            €  @Html.DisplayFor(modelItem => item.Price)
+                        </h4>
+                    </div>
+
+                </li>
+
+            }
+        </ul>
+    </div>
+
+</div>
+

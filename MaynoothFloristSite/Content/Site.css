@@ -1,0 +1,101 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.navbar {
+    margin-left: 0;
+    background-color: white;
+}
+
+
+    .navbar .nav > li > a {
+        color: aqua;
+    }
+
+
+        .navbar .nav > li > a:hover {
+            color: hotpink;
+        }
+
+
+.navbar-btn {
+    background-color: aqua;
+    margin-left: 2px;
+    margin-right: 2px;
+    filter: progid:DXImageTransform.Microsoft.Gradient(enabled='false');
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-image: none;
+    border: 0;
+}
+
+.btn-default:hover {
+    background-color: hotpink;
+    color: white;
+
+}
+
+.btn-default{
+    background-color: aqua;
+}
+
+.btn-default:focus{
+    background-color: hotpink;
+    color: white;
+}
+
+
+.navbar-brand {
+    max-width: 40%;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-top: 3px;
+}
+
+.navbar-toggle {
+    background-color: hotpink;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-toggle:focus{
+    background-color: aqua;
+}
+
+
+.navbar-inverse  {
+
+    background-color: hotpink;
+    
+}
+
+.jumbotron{
+    background-image: url(../Content/Images/pagebanner.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 300px;
+   
+}
