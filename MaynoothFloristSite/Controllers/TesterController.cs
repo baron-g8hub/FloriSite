@@ -11,6 +11,8 @@ namespace MaynoothFloristSite.Controllers
         // GET: Tester
         public ActionResult Index()
         {
+            var tester = 0;
+
             return View();
         }
     }
