@@ -34,6 +34,7 @@ namespace MaynoothFloristSite.Controllers
                         //Session["LogedUserFullname"] = v.FullName.ToString();
                         FormsAuthentication.SetAuthCookie(user.Username, false);
                         return RedirectToLocal(returnUrl);
+
                     }
                 }
                
