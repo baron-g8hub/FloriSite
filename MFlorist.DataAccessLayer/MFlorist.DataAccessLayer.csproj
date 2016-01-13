@@ -61,6 +61,20 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>UserContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="UserEntity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -82,15 +96,28 @@
       <LastGenOutput>Model.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MFlorist.BusinessLogicLayer\MFlorist.BusinessLogicLayer.csproj">
-      <Project>{037e9017-1b5d-479d-a798-1a26fbc60954}</Project>
-      <Name>MFlorist.BusinessLogicLayer</Name>
-    </ProjectReference>
+    <EntityDeploy Include="UserContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>UserContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="UserContext.edmx.diagram">
+      <DependentUpon>UserContext.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UserContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UserContext.edmx</DependentUpon>
+      <LastGenOutput>UserContext.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="UserContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UserContext.edmx</DependentUpon>
+      <LastGenOutput>UserContext.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

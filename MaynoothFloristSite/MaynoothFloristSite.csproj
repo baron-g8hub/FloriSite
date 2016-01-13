@@ -191,6 +191,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ManageProductController.cs" />
     <Compile Include="Controllers\TesterController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -201,16 +202,15 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Angular\Controller.js" />
+    <Content Include="Content\Angular\Module.js" />
+    <Content Include="Content\Angular\Service.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\pagebanner.jpg" />
     <Content Include="Content\ui-bootstrap-csp.css" />
-    <Content Include="Products\banner12.png" />
-    <Content Include="Products\bouqet.jpg" />
-    <Content Include="Products\heroBanner.png" />
-    <Content Include="Products\weddingflower.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -224,6 +224,10 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Products\banner12.png" />
+    <Content Include="Products\bouqet.jpg" />
+    <Content Include="Products\heroBanner.png" />
+    <Content Include="Products\weddingflower.jpg" />
     <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
@@ -287,6 +291,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\ProductDisplay.cshtml" />
     <Content Include="Views\ManageProduct\Edit.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -300,6 +305,10 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MFlorist.BusinessLogicLayer\MFlorist.BusinessLogicLayer.csproj">
+      <Project>{037e9017-1b5d-479d-a798-1a26fbc60954}</Project>
+      <Name>MFlorist.BusinessLogicLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MFlorist.DataAccessLayer\MFlorist.DataAccessLayer.csproj">
       <Project>{19837986-89d2-42a8-96b1-8de578896eb8}</Project>
       <Name>MFlorist.DataAccessLayer</Name>

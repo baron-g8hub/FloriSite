@@ -25,8 +25,7 @@ namespace MFlorist.DataAccessLayer
  
 
         public string Name { get; set; }
-
-
+        
     
         public Nullable<decimal> Price { get; set; }
 

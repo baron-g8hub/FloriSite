@@ -29,5 +29,14 @@ namespace MaynoothFloristSite.Controllers
                 return Json(employeeList, JsonRequestBehavior.AllowGet);
             }
         }
+        public JsonResult getItemByNo(int? itemId)
+        {
+            using (db)
+            {
+                int no = Convert.ToInt32(itemId);
+                var employeeList = db.Products.Find(no);
+                return Json(employeeList, JsonRequestBehavior.AllowGet);
+            }
+        }
     }
 }

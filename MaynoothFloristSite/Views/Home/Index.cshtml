@@ -7,41 +7,38 @@
 <h2>Gallery</h2>
 
 
-@*<div class="jumbotron">
+<div class="jumbotron">
     <div class="container">
         <h2>Welcome to Maynooth Florist!</h2>
         <p>This is an example for jumbotron.</p>
-        
-            <a class="btn btn-primary btn-lg" role="button">
-                Order Now!
-            </a>
-       
+
+        <a class="btn btn-primary btn-lg" role="button">
+            Order Now!
+        </a>
+
     </div>
-</div>*@
+</div>
 
 <div class="container">
     <style>
-
-        li{
+        li {
             display: inline-block;
             float: none;
             padding-left: 5px;
             padding-right: 5px;
             margin-left: auto;
             margin-right: auto;
-
         }
     </style>
 
     <div class="row">
         <ul>
-         
+
             @foreach (var item in Model)
             {
-             
                 <li>
 
-                    <div>
+                    <div onclick="showModal('@item.Name','@item.Price','@item.Image','@item.Description')">
 
                         <a href="#">
                             <img src="@Url.Content("~/Products/")@Html.DisplayFor(modelItem => item.Image)" alt="Product Image" class="img-thumbnail img-rounded" width="160" height="179" />
@@ -61,4 +58,71 @@
     </div>
 
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">
+                  
+                </h4>
+            </div>
+            <div class="modal-body">
+
+                <ul>
+                    <li>
+                        <div>
+                            <img src="~/Products/weddingflower.jpg" alt="Product Image" class="img-thumbnail img-rounded" width="300" height="179" />
+                            <br />
+                            <h4>
+                                €   <input type="text" id="itemPrice" />
+                            </h4>
+                            <br />
+                            <h4>
+                                <input type="text" name="itemDescription" id="itemDescription" />
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+
+    <script type="text/javascript">
+
+        function showModal(name, price, imageUrl, description) {
+
+            console.log(name + price + description);
+
+            //alert(name + price);
+
+            $('#myModal').modal('show');
+
+            $('h4.modal-title').text(name);
+
+            $(".modal-body #itemImageUrl").val(imageUrl);
+            $(".modal-body #itemName").val(name);
+            $(".modal-body #itemPrice").val(price);
+            $(".modal-body #itemDescription").val(description);
+
+
+        }
+
+    </script>
+}
+
+
+
+
+
+
 

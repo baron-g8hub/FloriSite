@@ -48,10 +48,17 @@
   <ItemGroup>
     <Compile Include="FlowerProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MFlorist.DataAccessLayer\MFlorist.DataAccessLayer.csproj">
+      <Project>{19837986-89d2-42a8-96b1-8de578896eb8}</Project>
+      <Name>MFlorist.DataAccessLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
