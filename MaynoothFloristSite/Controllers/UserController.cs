@@ -28,7 +28,7 @@ namespace MaynoothFloristSite.Controllers
                 {
                     var v = db.Users.Where(a => a.Username.Equals(user.Username) && a.Password.Equals(user.Password)).FirstOrDefault();
                     if (v != null)
-                    { 
+                    {  
 
                         //Session["LogedUserID"] = v.UserID.ToString();
                         //Session["LogedUserFullname"] = v.FullName.ToString();
